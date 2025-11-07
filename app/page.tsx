@@ -1,65 +1,127 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { motion } from 'framer-motion';
+import Navbar from '@/components/NavBar';
+import Footer from '@/components/Footer';
+import FadeIn from '@/components/FadeIn';
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main>
+      <Navbar />
+      <div className="pt-16" />
+
+      <FadeIn>
+        {/* Hero */}
+        <section className="relative isolate h-[88vh] min-h-[560px] w-full overflow-hidden rounded-b-[2.5rem] border-b border-white/10">
+          <div className="absolute inset-0 -z-10">
+            <video className="hidden sm:block w-full h-full object-cover" autoPlay playsInline muted loop>
+              <source src="https://cdn.coverr.co/videos/coverr-dark-cafe-ambience-9352/1080p.mp4" type="video/mp4" />
+            </video>
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop"
+              alt="Cafe ambience"
+              className="sm:hidden w-full h-full object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+            <div
+              className="pointer-events-none absolute inset-0 mix-blend-screen opacity-40"
+              style={{
+                backgroundImage:
+                  'radial-gradient(closest-side, rgba(236,72,153,.35), transparent 60%), radial-gradient(closest-side, rgba(168,85,247,.35), transparent 60%)',
+                backgroundSize: '60% 60%, 60% 60%',
+                backgroundPosition: '-10% 120%, 110% -20%',
+              }}
+            />
+          </div>
+
+          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-20">
+            <motion.h1
+              className="text-4xl sm:text-6xl font-bold text-white drop-shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Coffee by Day. <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-fuchsia-400">Beats</span> by Night.
+            </motion.h1>
+            <motion.p
+              className="mt-4 max-w-2xl text-white/80"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+            >
+              Specialty coffee, crafted cocktails, and weekend DJs. Your new late-night ritual starts here.
+            </motion.p>
+            <motion.div
+              className="mt-8 flex flex-wrap items-center gap-3"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+            >
+              <a
+                href="/menu"
+                className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-black bg-white hover:bg-white/90 transition"
+              >
+                Explore Menu
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-white border border-white/20 hover:bg-white/10 transition"
+              >
+                Reserve a Table
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Highlights */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              { title: 'Single-Origin', desc: 'Seasonal roasts from small farms, dialed-in daily.', img: 'https://images.unsplash.com/photo-1503481766315-7a586b20f66f?q=80&w=1200&auto=format&fit=crop' },
+              { title: 'Small Plates', desc: 'Shareable bites with a midnight twist.', img: 'https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop' },
+              { title: 'Live DJs', desc: 'Friday/Saturday sets bring a neon glow.', img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop' },
+            ].map((c, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                <img src={c.img} alt={c.title} className="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+                <div className="p-5">
+                  <h3 className="text-white font-semibold">{c.title}</h3>
+                  <p className="text-white/70 text-sm mt-2">{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Events Banner */}
+        <section className="mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-pink-500/20 via-fuchsia-500/20 to-violet-500/20 p-6 sm:p-10">
+              <div
+                className="absolute inset-0 -z-10 opacity-50"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(circle at 20% 30%, rgba(236,72,153,0.25), transparent 50%), radial-gradient(circle at 80% 70%, rgba(139,92,246,0.25), transparent 50%)',
+                }}
+              />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-white text-2xl font-semibold">This Weekend: Night Brew Sessions</h3>
+                  <p className="text-white/80 mt-1">Guest DJ • Signature espresso martinis • Limited plates after 10pm</p>
+                </div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-black bg-white hover:bg-white/90 transition"
+                >
+                  Get On The List
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      <Footer />
+    </main>
   );
 }
