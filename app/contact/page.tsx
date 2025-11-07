@@ -67,7 +67,7 @@ export default function ContactPage() {
                   className="w-full h-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-73.5869%2C45.4858%2C-73.5785%2C45.4890&layer=mapnik&marker=45.4874%2C-73.5827"g;p
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-73.5869%2C45.4858%2C-73.5785%2C45.4890&layer=mapnik&marker=45.4874%2C-73.5827"
                 />
               </div>
             </div>
