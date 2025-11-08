@@ -42,7 +42,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Coffee by Day. <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-fuchsia-400">Beats</span> by Night.
+              Café le jour. <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-fuchsia-400">Musique</span> la nuit.
             </motion.h1>
             <motion.p
               className="mt-4 max-w-2xl text-white/80"
@@ -50,6 +50,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
             >
+              Café de spécialité, cocktails raffinés et DJ le week-end. Votre nouveau rituel nocturne commence ici. //
               Specialty coffee, crafted cocktails, and weekend DJs. Your new late-night ritual starts here.
             </motion.p>
             <motion.div
@@ -62,13 +63,13 @@ export default function HomePage() {
                 href="/menu"
                 className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-black bg-white hover:bg-white/90 transition"
               >
-                Explore Menu
+                Découvrir le menu
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-white border border-white/20 hover:bg-white/10 transition"
               >
-                Reserve a Table
+                Réservations
               </a>
             </motion.div>
           </div>
