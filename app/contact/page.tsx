@@ -12,9 +12,9 @@ export default function ContactPage() {
       <FadeIn>
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="mt-6 sm:mt-10 mb-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">Contact & Reservations</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Contactez-nous et Réservations</h2>
             <p className="text-white/70 mt-2 max-w-2xl">
-              Drop in, book a table, or enquire about private events. We’ll get back within 24 hours.
+              Passez nous voir, réservez une table ou renseignez-vous sur nos événements privés. Nous vous répondrons dans les 24 heures.
             </p>
           </header>
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="block text-sm text-white/80 mb-1" htmlFor="phone">Phone</label>
-                  <input id="phone" required className="w-full rounded-xl bg-black/40 border border-white/15 px-3 py-2 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-pink-500/60" placeholder="(+91)" />
+                  <input id="phone" required className="w-full rounded-xl bg-black/40 border border-white/15 px-3 py-2 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-pink-500/60" placeholder="(+1)" />
                 </div>
                 <div>
                   <label className="block text-sm text-white/80 mb-1" htmlFor="date">Date</label>

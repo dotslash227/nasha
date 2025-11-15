@@ -15,14 +15,11 @@ export default function HomePage() {
         {/* Hero */}
         <section className="relative isolate h-[88vh] min-h-[560px] w-full overflow-hidden rounded-b-[2.5rem] border-b border-white/10">
           <div className="absolute inset-0 -z-10">
-            <video className="hidden sm:block w-full h-full object-cover" autoPlay playsInline muted loop>
-              <source src="https://cdn.coverr.co/videos/coverr-dark-cafe-ambience-9352/1080p.mp4" type="video/mp4" />
-            </video>
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop"
-              alt="Cafe ambience"
-              className="sm:hidden w-full h-full object-cover"
-            />
+  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop"
+  alt="Cafe ambience"
+  className="w-full h-full object-cover"
+/>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             <div
               className="pointer-events-none absolute inset-0 mix-blend-screen opacity-40"

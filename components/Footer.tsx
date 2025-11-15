@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-6 text-center text-xs text-white/50">
-        © {new Date().getFullYear()} <a href="https://nashabistro.ca" className="hover:underline">nashabistro.ca</a> · All rights reserved.
+        © {new Date().getFullYear()} <a href="https://nashabistro.ca" className="hover:underline">Nasha Bistro</a> · Designed by DJDroov.
       </div>
     </footer>
   );
