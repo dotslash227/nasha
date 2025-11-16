@@ -16,7 +16,7 @@ export default function HomePage() {
         <section className="relative isolate h-[88vh] min-h-[560px] w-full overflow-hidden rounded-b-[2.5rem] border-b border-white/10">
           <div className="absolute inset-0 -z-10">
             <img
-  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop"
+  src="https://images.unsplash.com/photo-1417353783325-14cb8f9ba1dd?q=80&w=1920&auto=format&fit=crop"
   alt="Cafe ambience"
   className="w-full h-full object-cover"
 />
@@ -39,7 +39,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Café le jour. <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-fuchsia-400">Musique</span> la nuit.
+              Bistro le jour. <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-fuchsia-400">Musique</span> la nuit.
             </motion.h1>
             <motion.p
               className="mt-4 max-w-2xl text-white/80"
@@ -47,8 +47,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
             >
-              Café de spécialité, cocktails raffinés et DJ le week-end. Votre nouveau rituel nocturne commence ici. //
-              Specialty coffee, crafted cocktails, and weekend DJs. Your new late-night ritual starts here.
+              Le nouveau bistrot spécialisé de Montréal, au cœur de Little Burgundy, servant de délicieux petits-déjeuners anglais et sud-indiens ainsi que des dîners savoureux, le tout accompagné d’une énergie musicale IndoHouse.
             </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap items-center gap-3"
